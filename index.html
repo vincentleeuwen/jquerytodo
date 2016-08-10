@@ -103,9 +103,11 @@
   </div>
 
   <script>
-    // JavaScript here...
-
-
+    function toggleDone() {
+      var checkbox = this;
+      $(checkbox).parent().toggleClass("completed");
+      updateCounters();
+    }
 
     function updateCounters() {
       ntodos = $(".todo").length;
@@ -120,6 +122,8 @@
 
     updateCounters();
 
+
+    $("input[type=checkbox]").bind('change', toggleDone);
 
   </script>
 </body>
