@@ -104,6 +104,23 @@
 
   <script>
     // JavaScript here...
+
+
+
+    function updateCounters() {
+      ntodos = $(".todo").length;
+      ncompleted = $(".completed").length;
+
+      $("#total-count").html(ntodos);
+      // completed count
+      $("#completed-count").html(ncompleted);
+      // Total number of uncompleted todos
+      $("#todo-count").html(ntodos = ncompleted);
+    };
+
+    updateCounters();
+
+
   </script>
 </body>
 </html>
